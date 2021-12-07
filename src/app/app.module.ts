@@ -7,18 +7,21 @@ import { BarranavComponent } from './plantila/barranav/barranav.component';
 import { PiedepaginaComponent } from './plantila/piedepagina/piedepagina.component';
 import { ContenidoComponent } from './plantila/contenido/contenido.component';
 import { ErrorComponent } from './plantila/error/error.component';
-
+import { InicioComponent } from './plantila/inicio/inicio.component';
+import {HttpClientModule}from'@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    BarranavComponent,
-    PiedepaginaComponent,
+    BarranavComponent,    
     ContenidoComponent,
-    ErrorComponent
+    PiedepaginaComponent,
+    ErrorComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

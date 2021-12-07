@@ -1,0 +1,22 @@
+
+  .dropdown-content{
+    width: 180px !important;
+    height: auto !important;    
+    background-color: #03a9f4
+
+}
+.dropdown-content a {
+    color: rgb(252, 249, 249);    
+    
+    
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #29b8fa
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: inline-block;
+  }
+  
+ 

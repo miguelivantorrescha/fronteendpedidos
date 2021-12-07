@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ModeloIdentificar } from 'src/app/modelos/identificar.modelo';
+import { SeguridadService } from 'src/app/servicios/seguridad.service';
 
 @Component({
   selector: 'app-barranav',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarranavComponent implements OnInit {
 
-  constructor() { }
+
+seiniciosesion: boolean=false;
+subs: Subscription=new Subscription();
+
+  constructor(private servicioseguri: SeguridadService) { 
+
+
+  }
 
   ngOnInit(): void {
+    this.subs=this.servicioseguri.Obtenerdatosusuariosesion().subscribe((datos:ModeloIdentificar)=>{
+     this.seiniciosesion=datos.estaidentificado;
+    });
   }
 
 }
