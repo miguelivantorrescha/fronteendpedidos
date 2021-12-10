@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorsesionGuard } from 'src/app/guardianes/validadorsesion.guard';
 
 import { BuscarempleadoComponent } from './empleado/buscarempleado/buscarempleado.component';
 import { CrearempleadoComponent } from './empleado/crearempleado/crearempleado.component';
@@ -34,7 +35,8 @@ const routes: Routes = [{
 },
 { 
   path:"crearproducto",
-  component:CrearproductoComponent
+  component:CrearproductoComponent,
+  canActivate:[ValidadorsesionGuard]
 },
 {
 path:"editarproducto/:id",

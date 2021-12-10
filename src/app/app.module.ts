@@ -9,6 +9,8 @@ import { ContenidoComponent } from './plantila/contenido/contenido.component';
 import { ErrorComponent } from './plantila/error/error.component';
 import { InicioComponent } from './plantila/inicio/inicio.component';
 import {HttpClientModule}from'@angular/common/http';
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {HttpClientModule}from'@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

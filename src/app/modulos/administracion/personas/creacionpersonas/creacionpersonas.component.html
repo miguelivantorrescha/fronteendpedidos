@@ -34,6 +34,16 @@
             <label for="celular">Telefono</label>
           </div>
         </div>
+        <div class="row">
+          <div class="input-field col s12">            
+            <form [formGroup]="fgvalidador">
+              <ngx-recaptcha2 #captchaElem
+              [siteKey]="siteKey"
+              formControlName="recaptcha">
+            </ngx-recaptcha2>
+            </form>
+        </div>
+        </div>
         <div class="row">  
             <div class="input-field col s12">
               <button [disabled]="!fgvalidador.valid" class="btn cyan waves-effect waves-light right" type="submit" name="action">Enviar
@@ -42,8 +52,8 @@
             </div>
           </div>
       </form>
-    </div>
   </div>
  
-   </div>
+ 
+   
 

@@ -17,6 +17,7 @@ import { BuscarempleadoComponent } from './empleado/buscarempleado/buscaremplead
 import { EliminarempleadoComponent } from './empleado/eliminarempleado/eliminarempleado.component';
 import { CategoriaComponent } from './otros/categoria/categoria.component';
 import { NuevosComponent } from './otros/nuevos/nuevos.component';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 
@@ -41,7 +42,8 @@ import { NuevosComponent } from './otros/nuevos/nuevos.component';
     CommonModule,
     AdministracionRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,    
+    NgxCaptchaModule
   ]
 })
 export class AdministracionModule { }
