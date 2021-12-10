@@ -9,9 +9,8 @@ import { SeguridadService } from './seguridad.service';
 })
 export class ProductoService {
 url='http://localhost:3000'
-token: string='';
+token: string="";
   constructor(private http: HttpClient, private seguridadservicio:SeguridadService) { 
-
     this.token=seguridadservicio.obtenertoken();
   }
 
@@ -22,22 +21,30 @@ return this.http.get<ModeloProducto[]>('http://localhost:3000/productos');
 crearProducto(producto:ModeloProducto):Observable<ModeloProducto>{
   return this.http.post<ModeloProducto>('http://localhost:3000/productos',producto,{
     headers: new HttpHeaders({
-      'athorization': `bearer ${this.token}`
+      'Authorization': `bearer ${this.token}`
     })
   });
 }
 actualizarProducto(producto:ModeloProducto):Observable<ModeloProducto>{
-  return  this.http.put<ModeloProducto>('http://localhost:3000/productos',producto,{
+  return  this.http.put<ModeloProducto>(`http://localhost:3000/productos/${producto.id}`,producto,{
     headers: new HttpHeaders({
-      'authorization': `bearer ${this.token}`
+      'Authorization': `bearer ${this.token}`
     })
   });
 }
 EliminarrProducto(id: string):Observable<any>{
   return this.http.delete<ModeloProducto>(`http://localhost:3000/productos/${id}`,{
-    headers: new HttpHeaders({'authorization': `bearer ${this.token}`})
+    headers: new HttpHeaders({'Authorization': `bearer ${this.token}`})
   });
 }
+Obtenerproductosporid(id: string):Observable<ModeloProducto>{
+  return this.http.get<ModeloProducto>(`http://localhost:3000/productos/${id}`);
+  }
+
+  
+
+
+
 }
 
 

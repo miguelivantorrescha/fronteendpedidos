@@ -4,8 +4,8 @@
     <li *ngIf ="!seiniciosesion"    class="blue-text text-lighten-5"><a routerLink="/administracion/creacionpersona"><i class="material-icons">cloud_done</i>Registrarse     </a></li>   
     <li *ngIf ="!seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/seguridad/identificacion"><i class="material-icons">cloud_queue</i>Iniciar Sesion</a></li>      
     <li *ngIf ="seiniciosesion"class="blue-text text-lighten-5"><a routerLink="/seguridad/cerrarsesion"><i class="material-icons">cloud_off</i>Cerrar sesion</a></li>
-    <li *ngIf ="seiniciosesion"  class="blue-text text-lighten-5"><a routerLink="/seguridad/recuperaclave"><i class="material-icons">cloud_off</i>Olvido</a></li>
-    <li *ngIf ="seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/administracion/persona"><i class="material-icons">cloud_off</i>Personas</a></li>
+    <li *ngIf ="seiniciosesion"  class="blue-text text-lighten-5"><a routerLink="/administracion/crearempleados"><i class="material-icons">cloud_off</i>Empleados</a></li>
+    <li *ngIf ="seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/administracion/creacionpersona"><i class="material-icons">cloud_off</i>Clientes</a></li>
     <li *ngIf ="seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/administracion/listarproductos"><i class="material-icons">cloud_off</i>Productos</a></li>
   </ul>
   <nav>
@@ -17,18 +17,21 @@
       <a href="#" data-target="mobile-Nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a routerLink="/inicio">Home</a></li>
-        <li><a href="badges.html">Categorias</a></li>
-        <li><a href="mobile.html">Lo más Nuevo</a></li>        
+        <li><a routerLink="/administracion/categoria">Categorias</a></li>
+        <li><a routerLink="/administracion/nuevos">Lo más Nuevo</a></li>        
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Cuenta<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
   </nav>  
 </div>
 <ul class="sidenav" id="mobile-Nav">
+  <li><a routerLink="/inicio">Home</a></li>
+        <li><a routerLink="/administracion/categoria">Categorias</a></li>
+        <li><a routerLink="/administracion/nuevos">Lo más Nuevo</a></li>
   <li *ngIf ="!seiniciosesion"    class="blue-text text-lighten-5"><a routerLink="/administracion/creacionpersona"><i class="material-icons">cloud_done</i>Registrarse     </a></li>   
-    <li *ngIf ="!seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/seguridad/identificacion"><i class="material-icons">cloud_queue</i>Iniciar Sesion</a></li>      
-    <li *ngIf ="seiniciosesion"class="blue-text text-lighten-5"><a routerLink="/seguridad/cerrarsesion"><i class="material-icons">cloud_off</i>Cerrar sesion</a></li>
-    <li *ngIf ="seiniciosesion"  class="blue-text text-lighten-5"><a routerLink="/seguridad/recuperaclave"><i class="material-icons">cloud_off</i>Olvido</a></li>
-    <li *ngIf ="seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/administracion/persona"><i class="material-icons">cloud_off</i>Personas</a></li>
-    <li *ngIf ="seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/administracion/listarproductos"><i class="material-icons">cloud_off</i>Productos</a></li>
+  <li *ngIf ="!seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/seguridad/identificacion"><i class="material-icons">cloud_queue</i>Iniciar Sesion</a></li>      
+  <li *ngIf ="seiniciosesion"class="blue-text text-lighten-5"><a routerLink="/seguridad/cerrarsesion"><i class="material-icons">cloud_off</i>Cerrar sesion</a></li>
+  <li *ngIf ="seiniciosesion"  class="blue-text text-lighten-5"><a routerLink="/administracion/crearempleados"><i class="material-icons">cloud_off</i>Empleados</a></li>
+  <li *ngIf ="seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/administracion/creacionpersona"><i class="material-icons">cloud_off</i>Clientes</a></li>
+  <li *ngIf ="seiniciosesion" class="blue-text text-lighten-5"><a routerLink="/administracion/listarproductos"><i class="material-icons">cloud_off</i>Productos</a></li>
 </ul>

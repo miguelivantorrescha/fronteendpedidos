@@ -12,9 +12,9 @@ import { ProductoService } from 'src/app/servicios/producto.service';
 export class CrearproductoComponent implements OnInit {
 
   fgvalidador : FormGroup = this.fb.group({
-    'nombre':['',Validators.required],
-    'precio':['',Validators.required],
-    'imagen':['',Validators.required]
+    'nombre':['',[Validators.required]],
+    'precio':['',[Validators.required]],
+    'imagen':['',[Validators.required]]
   })
   constructor(private fb:FormBuilder,private servicioproducto:ProductoService, private router:Router) { }
 
@@ -24,17 +24,12 @@ export class CrearproductoComponent implements OnInit {
   guardarproducto()
 {
   let nombre= this.fgvalidador.controls["nombre"].value;
-  let precio= this.fgvalidador.controls["precio"].value;
+  let precio= parseInt(this.fgvalidador.controls["precio"].value);
   let imagen= this.fgvalidador.controls["imagen"].value;
-  let p=new ModeloProducto; 
-  
+  let p=new ModeloProducto;   
   p.nombre=nombre;
   p.precio=precio;
   p.imagen=imagen;
-  alert("nombre="+p.nombre);
-  alert("precio="+p.precio);
-  alert("imagen="+p.imagen);
-
   this.servicioproducto.crearProducto(p).subscribe((datos: ModeloProducto)=>{
     alert("producto almacenado correctamente");
    this.router.navigate(["/administracion/listarproductos"]);

@@ -1,22 +1,23 @@
-<div class="container z-depth-2" >
-    <a routerLink="/administracion/crearproducto" class ="btn cyan waves-effect waves-light right">Nuevo producto</a>
-    <table class="table responsive">
-        <thead>
-            <tr>
-              <th>nombre</th>
-              <th>precio</th>
-              <th>imagen</th>
-              <th>editar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let p of listadoregistros">
-              <td>{{p.nombre}}</td>
-              <td>{{p.precio}}</td>
-              <td><img src="{{p.imagen}}"width="100" height="100"></td>
-              <td><a routerLink="/administracion/editarproducto/{{p.id}}" class ="btn cyan waves-effect waves-light right">Editar</a></td>
-            </tr>
-          </tbody>
-    </table>
-      
+<div class="container">
+  <a routerLink="/administracion/crearproducto" class ="btn  light-blue waves-effect waves-light right"><i class="material-icons left">queue</i>Nuevo producto</a>
+<table class="table responsive highlight " >
+    <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Imagen</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of listadoregistros">
+          <td>{{p.nombre}}</td>
+          <td>{{p.precio}}</td>
+          <td><img src="{{p.imagen}}"width="100" height="100"></td>
+          <td><button routerLink="/administracion/editarproducto/{{p.id}}" class =" btn-floating btn-small cyan waves-effect waves-light right"><i class="material-icons left">edit</i>Editar</button></td>
+          <td><button routerLink="/administracion/eliminarproducto/{{p.id}}" class =" btn-floating btn-small waves-effect waves-light red"><i class="material-icons left">delete</i>Eliminar</button></td>
+        </tr>
+      </tbody>
+</table>
 </div>

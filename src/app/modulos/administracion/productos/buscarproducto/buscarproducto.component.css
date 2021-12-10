@@ -1,0 +1,23 @@
+th {
+    border:1px solid #ababab;
+    padding:5px;
+    background-color: #00aaff;
+    color: #ffffff;
+}
+
+table td:nth-child(4) {
+    width: 50px;
+  }
+  table td:nth-child(2) {
+    width: 90px;
+  }
+  table td:nth-child(3) {
+    width: 100px;
+  }
+  table td:nth-child(5) {
+    width: 50px;
+  }
+  img:hover{ 
+    -webkit-transform: scale(3.5);
+    transform: scale(3.5)
+}

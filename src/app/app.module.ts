@@ -9,6 +9,7 @@ import { ContenidoComponent } from './plantila/contenido/contenido.component';
 import { ErrorComponent } from './plantila/error/error.component';
 import { InicioComponent } from './plantila/inicio/inicio.component';
 import {HttpClientModule}from'@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import {HttpClientModule}from'@angular/common/http';
     ContenidoComponent,
     PiedepaginaComponent,
     ErrorComponent,
-    InicioComponent
+    InicioComponent,
+    
   ],
   imports: [
     BrowserModule,

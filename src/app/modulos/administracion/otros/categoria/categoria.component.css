@@ -1,0 +1,10 @@
+div {
+    border:1px solid #ababab;
+    padding:5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+img:hover{ 
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5)
+}

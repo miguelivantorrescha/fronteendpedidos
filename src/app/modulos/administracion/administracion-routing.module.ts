@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { BuscarempleadoComponent } from './empleado/buscarempleado/buscarempleado.component';
+import { CrearempleadoComponent } from './empleado/crearempleado/crearempleado.component';
+import { EditarempleadoComponent } from './empleado/editarempleado/editarempleado.component';
+import { EliminarempleadoComponent } from './empleado/eliminarempleado/eliminarempleado.component';
+import { CategoriaComponent } from './otros/categoria/categoria.component';
+import { NuevosComponent } from './otros/nuevos/nuevos.component';
 import { BuscarpersonaComponent } from './personas/buscarpersona/buscarpersona.component';
 import { CreacionpersonasComponent } from './personas/creacionpersonas/creacionpersonas.component';
 import { EditarpersonaComponent } from './personas/editarpersona/editarpersona.component';
@@ -38,13 +45,39 @@ path:"buscarproducto",
   component:BuscarproductoComponent
 },
 {
-path:"eliminarproducto",
+path:"eliminarproducto/:id",
   component:EliminarproductoComponent
 },
 {
 path:"listarproductos",
   component:BuscarproductoComponent
+},
+{
+path:"categoria",
+  component:CategoriaComponent
+},
+{
+path:"nuevos",
+  component:NuevosComponent
 }
+,
+{
+path:"crearempleados",
+  component:CrearempleadoComponent
+},
+{
+path:"buscarempleado",
+  component:BuscarempleadoComponent
+},
+{
+path:"editarempleados/:id",
+  component:EditarempleadoComponent
+},
+{
+path:"eliminarempleado/:id",
+  component:EliminarempleadoComponent
+}
+
 
 ];
 

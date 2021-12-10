@@ -13,9 +13,10 @@ export class BuscarproductoComponent implements OnInit {
   ngOnInit(): void {
     this.obtenerlistaproductos();
   }
+ 
   obtenerlistaproductos(){
  this.productoservicio.Obtenerproductos().subscribe((datos:ModeloProducto[])=> {
-this.listadoregistros=datos;
+ this.listadoregistros=datos;
 
  });
   }

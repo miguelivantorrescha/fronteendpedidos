@@ -11,6 +11,13 @@ import { BuscarproductoComponent } from './productos/buscarproducto/buscarproduc
 import { EditarproductoComponent } from './productos/editarproducto/editarproducto.component';
 import { EliminarproductoComponent } from './productos/eliminarproducto/eliminarproducto.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CrearempleadoComponent } from './empleado/crearempleado/crearempleado.component';
+import { EditarempleadoComponent } from './empleado/editarempleado/editarempleado.component';
+import { BuscarempleadoComponent } from './empleado/buscarempleado/buscarempleado.component';
+import { EliminarempleadoComponent } from './empleado/eliminarempleado/eliminarempleado.component';
+import { CategoriaComponent } from './otros/categoria/categoria.component';
+import { NuevosComponent } from './otros/nuevos/nuevos.component';
+
 
 
 @NgModule({
@@ -22,7 +29,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CrearproductoComponent,
     BuscarproductoComponent,
     EditarproductoComponent,
-    EliminarproductoComponent
+    EliminarproductoComponent,
+    CrearempleadoComponent,
+    EditarempleadoComponent,
+    BuscarempleadoComponent,
+    EliminarempleadoComponent,
+    CategoriaComponent,
+    NuevosComponent
   ],
   imports: [
     CommonModule,
