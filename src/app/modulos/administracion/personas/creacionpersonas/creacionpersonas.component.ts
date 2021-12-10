@@ -36,14 +36,15 @@ export class CreacionpersonasComponent implements OnInit {
   //p.telefono=telefono;
   this.serviciocadministracion.creacionusuario(nombre,  apellidos,  correo, celular).subscribe((datos: ModeloPresona)=>{
     alert("cliente  creado correctamente");
-  
+    
+    console.log(this.serviciocadministracion);
+
+
+
+
    this.router.navigate(["/inicio"]);
   },(error:any)=>{
-    alert(nombre); 
-    alert(apellidos); 
-    alert(correo); 
-    alert(celular);
-    alert("error creando cliente");
+        alert("error creando cliente");
 
   });
 

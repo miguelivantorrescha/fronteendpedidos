@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./identificacion.component.css']
 })
 export class IdentificacionComponent implements OnInit {
-
+  user: any;
   fgvalidador:FormGroup = this.fb.group({
     'usuario':['',[Validators.required,Validators.email]],
     'clave':['',[Validators.required]]
@@ -17,18 +17,21 @@ export class IdentificacionComponent implements OnInit {
   constructor(private fb:FormBuilder, private servicioSeguridad: SeguridadService,private router:Router) { }
 
   ngOnInit(): void {
-   
+    
   }
 
 identificarusuario(){
  let usuario=this.fgvalidador.controls["usuario"].value;
  let clave=this.fgvalidador.controls["clave"].value;
  let clavecifrada= cryptoJS.MD5(clave).toString();
+
  this.servicioSeguridad.identificar(usuario,clavecifrada).subscribe((datos:any)=>{
+  
   this.servicioSeguridad.Almacensesion(datos);
   this.router.navigate(['/inicio']);
 
-  alert ("datos correctos")
+  alert ("datos correctos");
+  
  }, 
  (error:any)=>{
   alert ("datos invalidos")

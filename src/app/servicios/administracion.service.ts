@@ -14,8 +14,9 @@ export class AdministracionService {
 
   creacionusuario(nombre:string,apellidos:string,correo:string,celular:string):Observable<ModeloPresona>{
   return this.http.post("http://localhost:3000/personas",{
-  nombres:nombre,  apellidos:apellidos,  correo:correo,  celular:celular },{headers :new HttpHeaders()} )
-  }
+  nombre:nombre,  apellidos:apellidos,  correo:correo,  celular:celular },{headers :new HttpHeaders()} )
+ 
+}
   
 
 

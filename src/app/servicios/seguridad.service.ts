@@ -54,6 +54,19 @@ export class SeguridadService {
         }
       }
 
+nombres(){
+  let datosString=localStorage.getItem("datosSesion")
+  
+  if(datosString){
+    let datos=JSON.parse(datosString);
+    return datos;
+    
+  }else{
+    return '';
+  }
+}
+
+
       eliminarinformacionsesion(){
         localStorage.removeItem("datosSesion");
         this.refrescardatossesion(new ModeloIdentificar());
